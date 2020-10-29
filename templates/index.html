@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Allyk</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <script src="../static/js/jquery-3.1.0.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="../static/js/jquery-3.1.0.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="../static/css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="../static/css/dx.light.css" />
+    <script src="../static/js/dx.all.js"></script>
+    <link rel="stylesheet" type ="text/css" href ="../static/styles.css" />
+    <script src="../static/index.js"></script>
+
+    <script src="../static/moment-with-locales.min.js"></script>
+    <script src="../static/moment-timezone-with-data.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="../static/lightgallery/dist/css/lightgallery.min.css" />
+    <!-- videojs plugin for lightgallery plugin -->
+    <link href="../static/lightgallery/videojs/video-js.min.css" rel="stylesheet">
+    <script src="../static/lightgallery/videojs/video.min.js"></script>
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <div id="btnCategory" style="margin: 0.5%; color: #005485;"></div>
+        <div id="btnGoalsObjectives" style="margin: 0.5%; color: #005485;"></div>
+        <div id="btnEventTemplate" style="margin: 0.5%; color: #005485;"></div>
+        <a id="btnLogout" href="{{ url_for('logout') }}" style="margin: 0.5%; color: #aca1a1;"></a>
+
+
+        <div id="slbxEventTemplate" style = "margin: 0.5%; display:none"></div>
+        <div id="btnLoadTemplate"  style = "margin: 0.5%; display:none"></div><div id="btnUpdateWeekday" style="margin: 0.5%;  display:none; color: #FF4500; border-color: #FF4500;"></div>
+        <div id="btnInsertTemplate" style="margin: 0.5%; display:none; color: #FF4500; border-color: #FF4500;"></div>
+        <div id="grid-container-templateevents"  style = "margin: 0.5%; display:none"></div>
+
+
+        <div id="grid-container-category" style = "margin: 0.5%; display:none"></div>
+        <div id="grid-container-goalobjective" style = "margin: 0.5%; display:none"></div>
+
+        <div id="daybegin" style="margin: 0.5%"></div><div id="dayend" style="margin: 0.5%"></div><div id="btnLoadEvents" style="margin: 0.5%;"></div><div id="btnLoadFeedback"  style="margin: 0.5%;"></div>
+        <div id="grid-container-feedback" style="margin: 0.5%; display:none;"></div>
+        <div id="grid-container-events" style="margin: 0.5%;"></div>
+        <div id="grid-container-summary" class="selection-summary center">
+            <div id="btnEventCompleted"></div>
+            <div id="FileUploader"></div>
+            <div id="btnLoadGallery"></div>
+        </div>
+        <div id="Gallery"></div>
+    </div>
+
+    <!-- lightgallery plugins -->
+    <script src="../static/lightgallery/lib/jquery.mousewheel.min.js"></script>
+    <script src="../static/lightgallery/dist/js/lightgallery-all.js"></script>
+    <script src="../static/lightgallery/lib/picturefill.min.js"></script>
+
+    <script src="../static/lightgallery/modules/lg-thumbnail.js"></script>
+    <script src="../static/lightgallery/modules/lg-fullscreen.js"></script>
+    <script src="../static/lightgallery/modules/lg-video.min.js"></script>
+    <script src="../static/lightgallery/modules/lg-fullscreen.min.js"></script>
+    <script src="../static/lightgallery/modules/lg-autoplay.min.js"></script>
+    <script src="../static/lightgallery/modules/lg-zoom.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Allyk
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.0.min.js') }}"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="../static/js/jquery-3.1.0.min.js"%3E%3C/script%3E'))</script>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<form name="LoginSignupForm" action="/loginsignup"  method="post">
+        {{ LoginSignupForm.hidden_tag() }}
+	<h1 class="form-signin-heading">Ride the wellbeing!</h1>
+    {{ wtf.form_field(LoginSignupForm.mobilenumber) }}
+	{{ wtf.form_field(LoginSignupForm.email) }}
+	{{ wtf.form_field(LoginSignupForm.password) }}
+	<button name="action" value="btn_login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button name="action" value="btn_signup" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+	</form>
+</div> <!-- /container -->
+{% endblock %}
